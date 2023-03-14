@@ -1,0 +1,11 @@
+{
+	"recommendations": [
+		"svelte.svelte-vscode",
+		"ardenivanov.svelte-intellisense",
+		"dbaeumer.vscode-eslint",
+		"stylelint.vscode-stylelint",
+		"esbenp.prettier-vscode",
+		"ms-playwright.playwright",
+		"csstools.postcss"
+	]
+}
