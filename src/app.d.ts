@@ -7,6 +7,14 @@ declare global {
 		// interface PageData {}
 		// interface Platform {}
 	}
+
+	interface NavMenuItem {
+		id?: string;
+		label?: string; // the <a> aria-label
+		href?: string;
+		text: string; // the <a> display text
+		children?: NavMenuItem[];
+	}
 }
 
 export {};

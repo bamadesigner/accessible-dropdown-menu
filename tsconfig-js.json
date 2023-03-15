@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"outDir": "./static",
+		"allowJs": true,
+		"target": "es6"
+	},
+    "files": [
+        "./js/access-menu.ts"
+    ],
+    "exclude": []
+}

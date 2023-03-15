@@ -1,0 +1,27 @@
+@design-tokens url("./tokens.json") format('style-dictionary3');
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-size: 16px;
+	line-height: 1.6;
+	font-style: normal;
+	font-weight: 400;
+	color: design-token("color.base");
+}
+
+a {
+	color: design-token("color.link.base");
+	text-decoration: underline;
+
+	&:focus {
+		color: design-token("color.link.focus");
+	}
+	&:hover {
+		color: design-token("color.link.hover");
+	}
+}

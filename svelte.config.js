@@ -5,8 +5,10 @@ import { vitePreprocess } from "@sveltejs/kit/vite";
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
-	preprocess: vitePreprocess(),
-
+	preprocess: vitePreprocess({
+		postcss: true,
+		typescript: true,
+	}),
 	kit: {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter({
@@ -16,6 +18,9 @@ const config = {
 			precompress: false,
 			strict: true,
 		}),
+		/* version: {
+			name: "1.0", // Can set version here if you want. Otherwise, defaults to timestamp.
+		}, */
 	},
 };
 
