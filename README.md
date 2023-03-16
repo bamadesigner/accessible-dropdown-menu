@@ -52,3 +52,11 @@ To create the final markup for your menu:
 You will not need the other CSS files. These CSS files are just for this app.
 
 You can ignore everything else in the `docs` directory. I use the `docs` folder for the Github page.
+
+## Contributing
+
+If you wish to contribute, please create a [Pull Request](/pulls). I will reach out for discussion.
+
+## Found a bug?
+
+If you wish to report a bug, please create an [Issue](/issues). I will reach out for discussion.
