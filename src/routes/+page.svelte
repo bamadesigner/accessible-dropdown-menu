@@ -1,7 +1,10 @@
 <script lang="ts">
 	import AccessibleNav from "$lib/Nav.svelte";
-	import items from "$lib/menu_items";
-	import items_sample from "$lib/menu_items_sample";
+	import menu_data from "$lib/menu";
+	import menu_sample from "$lib/menu_sample";
+
+	let menu: NavMenu;
+	$: menu = menu_data && menu_data.items ? menu_data : menu_sample;
 </script>
 
 <svelte:head>
@@ -9,4 +12,8 @@
 </svelte:head>
 
 <h1>Accessible dropdown menu</h1>
-<AccessibleNav id="main-menu" ariaLabel="Primary" items={items && items.length ? items : items_sample} />
+{#if !menu}
+	<p>There is no menu information.</p>
+{:else}
+	<AccessibleNav {menu} />
+{/if}

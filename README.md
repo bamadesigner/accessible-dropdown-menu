@@ -1,6 +1,6 @@
 # Accessible dropdown menu
 
-By providing your menu information to the `src/lib/menu_items` file, this app can build your HTML markup, along with CSS and JS.
+By providing your menu information to the `src/lib/menu` file, this app can build your HTML markup, along with CSS and JS.
 
 ## Setup the app
 
@@ -12,9 +12,9 @@ By providing your menu information to the `src/lib/menu_items` file, this app ca
 
 ### Populate your menu information
 
-1. Open the `src/lib/menu_items` file and provide your information
+1. Open the `src/lib/menu` file and provide your information
 
-Open `src/lib/menu_items_sample` for example markup.
+Open `src/lib/menu_sample` for example markup.
 
 ## Development
 

@@ -3,9 +3,7 @@
 	import NavItem from "$lib/NavItem.svelte";
 
 	export let mode = "horizontal";
-	export let id: string | undefined = undefined;
-	export let ariaLabel: string | undefined = undefined;
-	export let items: NavMenuItem[] = [];
+	export let menu: NavMenu;
 	export let max_level: number = 3;
 
 	let js_file: string;
@@ -18,10 +16,12 @@
 	<script async type="text/javascript" src="/{js_file}?v={version}"></script>
 </svelte:head>
 
-{#if items && items.length}
-	<nav {id} class="acc-nav" aria-label={ariaLabel}>
+{#if !menu.items || !menu.items.length}
+	<p>There are no menu items.</p>
+{:else}
+	<nav id={menu.id} class="acc-nav" aria-label={menu.ariaLabel}>
 		<ul class="acc-menu">
-			{#each items as item, i}
+			{#each menu.items as item, i}
 				<NavItem {item} index={i} {max_level} />
 			{/each}
 		</ul>

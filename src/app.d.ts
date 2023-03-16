@@ -15,6 +15,12 @@ declare global {
 		text: string; // the <a> display text
 		children?: NavMenuItem[];
 	}
+
+	interface NavMenu {
+		id?: string;
+		ariaLabel?: string;
+		items?: NavMenuItem[];
+	}
 }
 
-export {};
+export { };
