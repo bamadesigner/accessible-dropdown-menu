@@ -2,10 +2,10 @@
 	export let item: NavMenuItem;
 	export let index: number;
 	export let level: number = 1;
-	export let max_level: number = 3;
+	export let maxDepth: number = 3;
 
 	let hasChildren: boolean;
-	$: hasChildren = level < max_level && item.children && item.children.length ? true : false;
+	$: hasChildren = level < maxDepth && item.children && item.children.length ? true : false;
 
 	let childId: string | undefined;
 	$: childId = item.id ? `${item.id}-submenu` : `submenu-${index}`;
@@ -41,7 +41,7 @@
 		{#if hasChildren && item.children && item.children.length}
 			<ul id={childId} class="acc-menu__submenu">
 				{#each item.children as child, i}
-					<svelte:self item={child} level={level + 1} {max_level} index={i} />
+					<svelte:self item={child} level={level + 1} {maxDepth} index={i} />
 				{/each}
 			</ul>
 		{/if}

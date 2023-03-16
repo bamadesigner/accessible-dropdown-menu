@@ -19,6 +19,7 @@ declare global {
 	interface NavMenu {
 		id?: string;
 		ariaLabel?: string;
+		maxDepth?: number;
 		items?: NavMenuItem[];
 	}
 }

@@ -4,7 +4,6 @@
 
 	export let mode = "horizontal";
 	export let menu: NavMenu;
-	export let max_level: number = 3;
 
 	let min: string;
 	$: min = dev ? "" : ".min";
@@ -22,7 +21,7 @@
 	<nav id={menu.id} class="acc-nav" aria-label={menu.ariaLabel}>
 		<ul class="acc-menu">
 			{#each menu.items as item, i}
-				<NavItem {item} index={i} {max_level} />
+				<NavItem {item} index={i} maxDepth={menu.maxDepth} />
 			{/each}
 		</ul>
 	</nav>
