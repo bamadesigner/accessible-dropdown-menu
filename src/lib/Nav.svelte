@@ -6,14 +6,14 @@
 	export let menu: NavMenu;
 	export let max_level: number = 3;
 
-	let js_file: string;
-	$: js_file = dev ? "access-menu.js" : "access-menu.min.js";
+	let min: string;
+	$: min = dev ? "" : ".min";
 </script>
 
 <svelte:head>
-	<link rel="preload" href="./access-menu-{mode}.css?v={version}" as="style" />
-	<link rel="stylesheet" href="./access-menu-{mode}.css?v={version}" />
-	<script async type="text/javascript" src="./{js_file}?v={version}"></script>
+	<link rel="preload" href="./access-menu-{mode}{min}.css?v={version}" as="style" />
+	<link rel="stylesheet" href="./access-menu-{mode}{min}.css?v={version}" />
+	<script async type="text/javascript" src="./access-menu{min}.js?v={version}"></script>
 </svelte:head>
 
 {#if !menu.items || !menu.items.length}
