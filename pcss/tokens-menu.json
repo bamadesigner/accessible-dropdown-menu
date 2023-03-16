@@ -1,12 +1,4 @@
 {
-	"color": {
-		"base": { "value": "#111111" },
-		"link": {
-			"base": { "value": "inherit" },
-			"focus": { "value": "#990000" },
-			"hover": { "value": "#990000" }
-		}
-	},
 	"horizontal": {
 		"base": {
 			"gap": { "value": "0.5rem" },

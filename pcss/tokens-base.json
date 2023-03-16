@@ -1,0 +1,11 @@
+{
+	"color": {
+		"base": { "value": "#111111" },
+		"padding": { "value": "2rem" },
+		"link": {
+			"base": { "value": "inherit" },
+			"focus": { "value": "#990000" },
+			"hover": { "value": "#990000" }
+		}
+	}
+}

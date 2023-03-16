@@ -13,7 +13,10 @@
 </svelte:head>
 
 <h1>Accessible dropdown menu</h1>
-<p>The following is an accessible "horizontal" dropdown menu. It is not (yet) built for "mobile, or smaller screens.</p>
+<p>
+	The following is an accessible "horizontal" dropdown menu. It is not (yet) built for "mobile, or smaller screens. <a
+		href="https://github.com/bamadesigner/accessible-dropdown-menu">Open the Github repo</a>
+</p>
 
 {#if !menu}
 	<p>There is no menu information.</p>

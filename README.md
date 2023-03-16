@@ -28,7 +28,7 @@ Open `src/lib/menu_sample` for example markup.
 
 If you wish to modify the `access-menu-horizontal.min.css` file, you can do so via design tokens.
 
-Open the `tokens.json` file and change the values.
+Open the `tokens-menu.json` file and change the values.
 
 If you wish to customize or add CSS properties that are not already available, you will need to edit or clone the `pcss/access-menu-horizontal.pcss` or create a new file with your desired changes.
 

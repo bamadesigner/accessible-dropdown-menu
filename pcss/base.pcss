@@ -1,4 +1,4 @@
-@design-tokens url("./tokens.json") format('style-dictionary3');
+@design-tokens url("./tokens-base.json") format('style-dictionary3');
 
 html,
 body {
@@ -12,6 +12,7 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	color: design-token("color.base");
+	padding: design-token("color.padding");
 }
 
 a {
