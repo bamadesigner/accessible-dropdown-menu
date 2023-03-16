@@ -18,7 +18,10 @@
 	"mobile, or smaller screens.
 </p>
 
-<p><a href="https://github.com/bamadesigner/accessible-dropdown-menu">Open the Github repo</a></p>
+<p>
+	<a href="https://github.com/bamadesigner/accessible-dropdown-menu">Open the Github repo</a> for instructions on how to
+	customize to your needs.
+</p>
 
 <br />
 
