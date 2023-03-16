@@ -9,7 +9,7 @@
 		"dev:svelte": "vite dev --open",
 		"dev:js": "npx tsc --watch --project tsconfig-js.json",
 		"build": "yarn run css && yarn run build:js && vite build && yarn run css:build",
-		"build:format": "prettier --write build/**/*.html",
+		"build:format": "prettier --write docs/**/*.html",
 		"build:js": "npx tsc --project tsconfig-js.json && yarn run uglify:js",
 		"uglify:js": "uglifyjs static/access-menu.js -o static/access-menu.min.js",
 		"preview": "vite preview --open",
@@ -28,7 +28,7 @@
 		"format:styles": "stylelint \"./pcss/**/*.pcss\" --fix",
 		"css": "NODE_ENV=development postcss ./pcss/**/*.pcss --ext=css --dir ./static",
 		"css:watch": "NODE_ENV=development postcss ./pcss/**/*.pcss --ext=css --dir ./static -w",
-		"css:build": "NODE_ENV=production postcss ./pcss/**/*.pcss --ext=css --dir ./build"
+		"css:build": "NODE_ENV=production postcss ./pcss/**/*.pcss --ext=css --dir ./docs"
 	},
 	"devDependencies": {
 		"@csstools/postcss-design-tokens": "^2.0.3",

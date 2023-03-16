@@ -9,3 +9,5 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 build/_app
 build/__data.json
+docs/_app
+docs/__data.json
