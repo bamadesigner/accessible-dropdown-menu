@@ -1,7 +1,7 @@
 {
 	"horizontal": {
 		"base": {
-			"gap": { "value": "0.5rem" },
+			"gap": { "value": "1.5rem" },
 			"flex-wrap": { "value": "wrap" },
 			"margin": { "value": "0" },
 			"padding": { "value": "0" },
