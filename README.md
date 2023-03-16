@@ -6,6 +6,10 @@ For now, there is only one "mode": a "horizontal" menu with dropdown submenus.
 
 I may add other "modes" in the future.
 
+## Demo
+
+[Open demo of the accessible dropdown menu](https://bamadesigner.github.io/accessible-dropdown-menu/)
+
 ## Setup the app
 
 ### Install the app
