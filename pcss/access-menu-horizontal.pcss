@@ -5,56 +5,57 @@
 
 .acc-menu {
 	display: flex;
-	align-items: center;
+	align-items: design-token("horizontal.base.align-items");
 	gap: design-token("horizontal.base.gap");
 	margin: design-token("horizontal.base.margin");
 	padding: design-token("horizontal.base.padding");
 
 	li {
 		list-style: none;
-		margin: 0;
+		margin: design-token("horizontal.item.margin");
+		padding: design-token("horizontal.item.padding");
 	}
 
-	/* Children menus */
+	/* Children submenus */
 	ul {
 		display: none;
-		margin: 0;
-		padding: 0;
+		margin: design-token("horizontal.submenu.margin");
+		padding: design-token("horizontal.submenu.padding");
 	}
 
 	/* Span around the root level text/link and the button */
 	.acc-menu__main {
 		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		align-items: design-token("horizontal.main.align-items");
+		justify-content: design-token("horizontal.main.justify-content");
 		gap: design-token("horizontal.main.gap");
 	}
 
 	.acc-menu__button {
 		display: none;
-		align-items: center;
-		justify-content: center;
 		appearance: none;
-		border: 0;
+		align-items: design-token("horizontal.button.align-items");
+		justify-content: design-token("horizontal.button.justify-content");
+		background-color: design-token("horizontal.button.background.color");
+		border: design-token("horizontal.button.border");
 		border-radius: design-token("horizontal.button.border-radius");
 		padding: design-token("horizontal.button.padding");
-		background-color: design-token("horizontal.button.background.color");
-		min-width: calc(design-token("horizontal.button.width") * 2);
-		min-height: calc(design-token("horizontal.button.height") * 2);
+		min-width: design-token("horizontal.button.min-width");
+		min-height: design-token("horizontal.button.min-height");
+		transition: design-token("horizontal.button.transition");
 		cursor: pointer;
-		transition: all 0.5s ease;
 
 		.acc-menu__button__icon {
 			&:before {
 				content: "";
-				display: inline-block;
-				border-style: solid;
-				border-width: design-token("horizontal.button.border-width") design-token("horizontal.button.border-width") 0 0;
-				border-color: currentColor;
-				width: design-token("horizontal.button.width");
-				height: design-token("horizontal.button.height");
-				transform: rotate(135deg);
-				margin: 0 0 calc(design-token("horizontal.button.height") / 2);
+				display: design-token("horizontal.button.icon.display");
+				border-style: design-token("horizontal.button.icon.border-style");
+				border-width: design-token("horizontal.button.icon.border-width");
+				border-color: design-token("horizontal.button.icon.border-color");
+				width: design-token("horizontal.button.icon.width");
+				height: design-token("horizontal.button.icon.height");
+				transform: design-token("horizontal.button.icon.transform");
+				margin: 0 0 calc(design-token("horizontal.button.icon.height") / 2);
 			}
 		}
 
