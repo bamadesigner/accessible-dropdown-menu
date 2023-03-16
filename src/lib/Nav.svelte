@@ -11,9 +11,9 @@
 </script>
 
 <svelte:head>
-	<link rel="preload" href="/access-menu-{mode}.css?v={version}" as="style" />
-	<link rel="stylesheet" href="/access-menu-{mode}.css?v={version}" />
-	<script async type="text/javascript" src="/{js_file}?v={version}"></script>
+	<link rel="preload" href="./access-menu-{mode}.css?v={version}" as="style" />
+	<link rel="stylesheet" href="./access-menu-{mode}.css?v={version}" />
+	<script async type="text/javascript" src="./{js_file}?v={version}"></script>
 </svelte:head>
 
 {#if !menu.items || !menu.items.length}
