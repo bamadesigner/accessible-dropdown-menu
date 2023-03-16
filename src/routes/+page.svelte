@@ -14,8 +14,9 @@
 
 <h1>Accessible dropdown menu</h1>
 <p>
-	The following is an accessible "horizontal" dropdown menu. It is not (yet) built for "mobile, or smaller screens. <a
-		href="https://github.com/bamadesigner/accessible-dropdown-menu">Open the Github repo</a>
+	The following is an accessible "horizontal" dropdown menu. It is a work in progress. It is not (yet) built for
+	"mobile, or smaller screens. <a href="https://github.com/bamadesigner/accessible-dropdown-menu"
+		>Open the Github repo</a>
 </p>
 
 {#if !menu}
