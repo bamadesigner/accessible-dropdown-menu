@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content=""><title>Accessible dropdown menu</title><!-- HEAD_svelte-388sve_START --><link rel="preload" href="./normalize.css?v=1678996729589" as="style"><link rel="stylesheet" href="./normalize.css?v=1678996729589"><link rel="preload" href="./normalize.css?v=1678996729589" as="style"><link rel="stylesheet" href="./base.css?v=1678996729589"><!-- HEAD_svelte-388sve_END --><!-- HEAD_svelte-w8jpol_START --><meta name="description" content="HTML, CSS, and JavaScript for an accessible dropdown menu"><!-- HEAD_svelte-w8jpol_END --><!-- HEAD_svelte-1nogssw_START --><link rel="preload" href="./access-menu-horizontal.min.css?v=1678996729589" as="style"><link rel="stylesheet" href="./access-menu-horizontal.min.css?v=1678996729589"><script async type="text/javascript" src="./access-menu.min.js?v=1678996729589"></script><!-- HEAD_svelte-1nogssw_END -->
+		<meta http-equiv="content-security-policy" content=""><title>Accessible dropdown menu</title><!-- HEAD_svelte-388sve_START --><link rel="preload" href="./normalize.css?v=1679678321785" as="style"><link rel="stylesheet" href="./normalize.css?v=1679678321785"><link rel="preload" href="./normalize.css?v=1679678321785" as="style"><link rel="stylesheet" href="./base.css?v=1679678321785"><!-- HEAD_svelte-388sve_END --><!-- HEAD_svelte-w8jpol_START --><meta name="description" content="HTML, CSS, and JavaScript for an accessible dropdown menu"><!-- HEAD_svelte-w8jpol_END --><!-- HEAD_svelte-1nogssw_START --><link rel="preload" href="./access-menu-horizontal.min.css?v=1679678321785" as="style"><link rel="stylesheet" href="./access-menu-horizontal.min.css?v=1679678321785"><script async type="text/javascript" src="./access-menu.min.js?v=1679678321785"></script><!-- HEAD_svelte-1nogssw_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -26,53 +26,53 @@
 
 
 
-<nav id="primary-menu" class="acc-nav" aria-label="Primary"><ul class="acc-menu">
-<li class="acc-menu__item acc-menu__item--root"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">First level 1</a>
+<nav id="primary-menu" class="acc-nav" aria-label="Primary"><ul class="acc-menu" data-acc-menu>
+<li class="acc-menu__item" data-acc-menu-item-parent="false" data-acc-menu-item-root="true"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">First level 1</a>
 			</span>
 		</li>
-<li id="second-item" class="acc-menu__item acc-menu__item--root acc-menu__item--children"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/" aria-label="Second item on first level">First level 2</a>
-			<button type="button" class="acc-menu__button" aria-label="Show submenu for First level 2" title="Show submenu" aria-controls="second-item-submenu" aria-expanded="false" data-expandedlabel="Hide submenu for First level 2" data-expandedtitle="Hide submenu"><span class="acc-menu__button__icon"></span></button></span>
+<li id="second-item" class="acc-menu__item acc-menu__item--parent" data-acc-menu-item-parent="true" data-acc-menu-item-root="true"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/" aria-label="Second item on first level">First level 2</a>
+			<button type="button" class="acc-menu__button" aria-label="Show submenu for First level 2" title="Show submenu" aria-controls="second-item-submenu" aria-expanded="false" data-acc-menu-item-button data-expandedlabel="Hide submenu for First level 2" data-expandedtitle="Hide submenu"><span class="acc-menu__button__icon"></span></button></span>
 		<ul id="second-item-submenu" class="acc-menu__submenu">
-<li class="acc-menu__item"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Second level one</a>
+<li class="acc-menu__item" data-acc-menu-item-parent="false" data-acc-menu-item-root="false"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Second level one</a>
 			</span>
 		</li>
-<li class="acc-menu__item  acc-menu__item--children"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Second level two</a>
-			<button type="button" class="acc-menu__button" aria-label="Show submenu for Second level two" title="Show submenu" aria-controls="submenu-1" aria-expanded="false" data-expandedlabel="Hide submenu for Second level two" data-expandedtitle="Hide submenu"><span class="acc-menu__button__icon"></span></button></span>
+<li class="acc-menu__item acc-menu__item--parent" data-acc-menu-item-parent="true" data-acc-menu-item-root="false"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Second level two</a>
+			<button type="button" class="acc-menu__button" aria-label="Show submenu for Second level two" title="Show submenu" aria-controls="submenu-1" aria-expanded="false" data-acc-menu-item-button data-expandedlabel="Hide submenu for Second level two" data-expandedtitle="Hide submenu"><span class="acc-menu__button__icon"></span></button></span>
 		<ul id="submenu-1" class="acc-menu__submenu">
-<li class="acc-menu__item"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Third level one</a>
+<li class="acc-menu__item" data-acc-menu-item-parent="false" data-acc-menu-item-root="false"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Third level one</a>
 			</span>
 		</li>
-<li class="acc-menu__item"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Third level two</a>
+<li class="acc-menu__item" data-acc-menu-item-parent="false" data-acc-menu-item-root="false"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Third level two</a>
 			</span>
 		</li></ul></li>
-<li class="acc-menu__item"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Second level three</a>
+<li class="acc-menu__item" data-acc-menu-item-parent="false" data-acc-menu-item-root="false"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Second level three</a>
 			</span>
 		</li>
-<li class="acc-menu__item"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Second level four</a>
+<li class="acc-menu__item" data-acc-menu-item-parent="false" data-acc-menu-item-root="false"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Second level four</a>
 			</span>
 		</li></ul></li>
-<li id="third-item" class="acc-menu__item acc-menu__item--root acc-menu__item--children"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">First level 3</a>
-			<button type="button" class="acc-menu__button" aria-label="Show submenu for First level 3" title="Show submenu" aria-controls="third-item-submenu" aria-expanded="false" data-expandedlabel="Hide submenu for First level 3" data-expandedtitle="Hide submenu"><span class="acc-menu__button__icon"></span></button></span>
+<li id="third-item" class="acc-menu__item acc-menu__item--parent" data-acc-menu-item-parent="true" data-acc-menu-item-root="true"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">First level 3</a>
+			<button type="button" class="acc-menu__button" aria-label="Show submenu for First level 3" title="Show submenu" aria-controls="third-item-submenu" aria-expanded="false" data-acc-menu-item-button data-expandedlabel="Hide submenu for First level 3" data-expandedtitle="Hide submenu"><span class="acc-menu__button__icon"></span></button></span>
 		<ul id="third-item-submenu" class="acc-menu__submenu">
-<li class="acc-menu__item  acc-menu__item--children"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Second level one</a>
-			<button type="button" class="acc-menu__button" aria-label="Show submenu for Second level one" title="Show submenu" aria-controls="submenu-0" aria-expanded="false" data-expandedlabel="Hide submenu for Second level one" data-expandedtitle="Hide submenu"><span class="acc-menu__button__icon"></span></button></span>
+<li class="acc-menu__item acc-menu__item--parent" data-acc-menu-item-parent="true" data-acc-menu-item-root="false"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Second level one</a>
+			<button type="button" class="acc-menu__button" aria-label="Show submenu for Second level one" title="Show submenu" aria-controls="submenu-0" aria-expanded="false" data-acc-menu-item-button data-expandedlabel="Hide submenu for Second level one" data-expandedtitle="Hide submenu"><span class="acc-menu__button__icon"></span></button></span>
 		<ul id="submenu-0" class="acc-menu__submenu">
-<li class="acc-menu__item"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Third level one</a>
+<li class="acc-menu__item" data-acc-menu-item-parent="false" data-acc-menu-item-root="false"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Third level one</a>
 			</span>
 		</li>
-<li class="acc-menu__item"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Third level two</a>
+<li class="acc-menu__item" data-acc-menu-item-parent="false" data-acc-menu-item-root="false"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Third level two</a>
 			</span>
 		</li></ul></li>
-<li class="acc-menu__item"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Second level two</a>
+<li class="acc-menu__item" data-acc-menu-item-parent="false" data-acc-menu-item-root="false"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Second level two</a>
 			</span>
 		</li></ul></li>
-<li class="acc-menu__item acc-menu__item--root"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">First level 4</a>
+<li class="acc-menu__item" data-acc-menu-item-parent="false" data-acc-menu-item-root="true"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">First level 4</a>
 			</span>
 		</li>
-<li id="fifth-item" class="acc-menu__item acc-menu__item--root acc-menu__item--children"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">First level 5</a>
-			<button type="button" class="acc-menu__button" aria-label="Show submenu for First level 5" title="Show submenu" aria-controls="fifth-item-submenu" aria-expanded="false" data-expandedlabel="Hide submenu for First level 5" data-expandedtitle="Hide submenu"><span class="acc-menu__button__icon"></span></button></span>
+<li id="fifth-item" class="acc-menu__item acc-menu__item--parent" data-acc-menu-item-parent="true" data-acc-menu-item-root="true"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">First level 5</a>
+			<button type="button" class="acc-menu__button" aria-label="Show submenu for First level 5" title="Show submenu" aria-controls="fifth-item-submenu" aria-expanded="false" data-acc-menu-item-button data-expandedlabel="Hide submenu for First level 5" data-expandedtitle="Hide submenu"><span class="acc-menu__button__icon"></span></button></span>
 		<ul id="fifth-item-submenu" class="acc-menu__submenu">
-<li class="acc-menu__item"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Second level one</a>
+<li class="acc-menu__item" data-acc-menu-item-parent="false" data-acc-menu-item-root="false"><span class="acc-menu__main"><a class="acc-menu__text acc-menu__link" href="/">Second level one</a>
 			</span>
 		</li></ul></li></ul></nav>
 

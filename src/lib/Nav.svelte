@@ -19,7 +19,7 @@
 	<p>There are no menu items.</p>
 {:else}
 	<nav id={menu.id} class="acc-nav" aria-label={menu.ariaLabel}>
-		<ul class="acc-menu">
+		<ul class="acc-menu" data-acc-menu>
 			{#each menu.items as item, i}
 				<NavItem {item} index={i} maxDepth={menu.maxDepth} />
 			{/each}

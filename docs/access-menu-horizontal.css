@@ -61,26 +61,26 @@
 			background-color:#ccc;
 			color:inherit;
 		}
-.acc-menu li.acc-menu__item--children{
+.acc-menu li.acc-menu__item--parent{
 		position:relative;
 	}
-.acc-menu li.acc-menu__item--children > ul{
+.acc-menu li.acc-menu__item--parent > ul{
 			position:absolute;
 			left:100%;
 			top:0;
 			min-width:100%;
 		}
-.acc-menu li.acc-menu__item--children:hover > ul,
-		.acc-menu li.acc-menu__item--children.acc-menu__item--expanded > ul{
+.acc-menu li.acc-menu__item--parent:hover > ul,
+		.acc-menu li.acc-menu__item--parent.acc-menu__item--expanded > ul{
 			display:block;
 		}
-.acc-menu li.acc-menu__item--children:not(.acc-menu__item--active):focus-within > ul{
+.acc-menu li.acc-menu__item--parent:not(.acc-menu__item--active):focus-within > ul{
 				display:block;
 			}
-.acc-menu li.acc-menu__item--children.acc-menu__item--active .acc-menu__button{
+.acc-menu li.acc-menu__item--parent.acc-menu__item--active .acc-menu__button{
 				display:flex;
 			}
-.acc-menu > li.acc-menu__item--children > ul{
+.acc-menu > li.acc-menu__item--parent > ul{
 			left:0;
 			top:100%;
 		}

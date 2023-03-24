@@ -1,11 +1,7 @@
 (() => {
-    const class_menu = "acc-menu";
     const classes = {
         active: "acc-menu__item--active",
-        button: "acc-menu__button",
-        children: "acc-menu__item--children",
         expanded: "acc-menu__item--expanded",
-        root: "acc-menu__item--root",
     };
     class AccessibleMenu {
         constructor(menu, focusSelectors) {
@@ -25,30 +21,26 @@
             ];
             this.init();
         }
-        ;
         getFocusableElements(container) {
             return container.querySelectorAll(this.focusSelectors.join(","));
         }
-        ;
         isFirstFocusableElement(element, container) {
             const focusableElements = this.getFocusableElements(container);
             return 0 < focusableElements.length ? element === focusableElements[0] : false;
         }
-        ;
         isLastFocusableElement(element, container) {
             const focusableElements = this.getFocusableElements(container);
             return 0 < focusableElements.length ? element === focusableElements[focusableElements.length - 1] : false;
         }
-        ;
         isRootMenuItem(item) {
-            return item.classList.contains(classes.root);
+            return item.dataset.accMenuItemRoot === "true";
         }
         openMenuItem(item) {
             if (this.isRootMenuItem(item)) {
                 this.closeOpenMenuItems(this.menu);
             }
             item.classList.add(classes.expanded);
-            const button = item.querySelector("." + classes.button);
+            const button = item.querySelector("button[data-acc-menu-item-button]");
             if (!button) {
                 return;
             }
@@ -62,10 +54,9 @@
             }
             button.ariaExpanded = "true";
         }
-        ;
         closeMenuItem(item, focus = true) {
             item.classList.remove(classes.expanded);
-            const button = item.querySelector("." + classes.button);
+            const button = item.querySelector("button[data-acc-menu-item-button]");
             if (button) {
                 if (button.dataset.defaultLabel) {
                     button.setAttribute("aria-label", button.dataset.defaultLabel);
@@ -80,21 +71,21 @@
             }
             this.closeOpenMenuItems(item);
         }
-        ;
-        closeOpenMenuItems(root_elem) {
-            const children = root_elem.querySelectorAll("." + classes.expanded);
-            children.forEach((child) => { this.closeMenuItem(child, false); });
+        closeOpenMenuItems(parent_elem) {
+            const expanded = parent_elem.querySelectorAll("." + classes.expanded);
+            expanded.forEach((child) => {
+                this.closeMenuItem(child, false);
+            });
         }
-        ;
         init() {
             let activeItems = 0;
-            const itemsWithChildren = this.menu.querySelectorAll("." + classes.children);
-            itemsWithChildren.forEach((item) => {
+            const parents = this.menu.querySelectorAll("[data-acc-menu-item-parent=\"true\"]");
+            parents.forEach((item) => {
                 try {
                     // Must have a button and submenu.
                     // Only want the first button since there is only one per item.
                     // We don't want to get the children buttons.
-                    const button = item.querySelector("button." + classes.button);
+                    const button = item.querySelector("button[data-acc-menu-item-button");
                     if (!button) {
                         throw new Error("AccessibleMenu: Button not found for menu item with children.");
                     }
@@ -164,10 +155,8 @@
                 e.stopPropagation();
             });
         }
-        ;
     }
-    ;
-    const accessMenus = document.querySelectorAll("." + class_menu);
+    const accessMenus = document.querySelectorAll("[data-acc-menu]");
     accessMenus.forEach((menu) => {
         new AccessibleMenu(menu);
     });

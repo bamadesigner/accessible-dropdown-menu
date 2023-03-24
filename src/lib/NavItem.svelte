@@ -16,8 +16,9 @@
 	<li
 		id={item.id}
 		class="acc-menu__item"
-		class:acc-menu__item--root={level === 1}
-		class:acc-menu__item--children={hasChildren}>
+		class:acc-menu__item--parent={hasChildren}
+		data-acc-menu-item-parent={hasChildren}
+		data-acc-menu-item-root={level === 1}>
 		<span class="acc-menu__main">
 			{#if item.href}
 				<a class="acc-menu__text acc-menu__link" href={item.href} aria-label={item.label}>{item.text}</a>
@@ -32,6 +33,7 @@
 					title="Show submenu"
 					aria-controls={childId}
 					aria-expanded="false"
+					data-acc-menu-item-button
 					data-expandedLabel="Hide submenu for {item.text}"
 					data-expandedTitle="Hide submenu">
 					<span class="acc-menu__button__icon" />
