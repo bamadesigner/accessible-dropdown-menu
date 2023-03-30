@@ -47,7 +47,7 @@ To create the final markup for your menu:
 1. Run `yarn run build`
 2. Open the `index.html` file in the `docs` directory
 3. Find and copy/paste the entire `<nav class="acc-nav"></nav>` element
-4. You will also need the `class-access-menu.min.js`, `access-menus.min.js`, and `access-menu-horizontal.min.css` files.
+4. You will also need the `access-menu.min.js` and `access-menu-horizontal.min.css` files.
 
 You will not need the other CSS files. These CSS files are just for this app.
 

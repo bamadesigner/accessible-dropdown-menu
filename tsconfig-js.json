@@ -5,8 +5,7 @@
 		"target": "es6"
 	},
     "files": [
-        "./js/class-access-menu.ts",
-        "./js/access-menus.ts"
+        "./js/access-menu.ts"
     ],
     "exclude": []
 }

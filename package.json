@@ -4,16 +4,17 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"dev": "yarn run css && concurrently \"yarn run dev:only\" \"yarn run dev:js\" \"yarn run css:watch\"",
+		"dev": "yarn run css && yarn run dev:js && concurrently \"yarn run dev:only\" \"yarn run dev:js:watch\" \"yarn run css:watch\"",
 		"dev:only": "vite dev --open",
 		"dev:svelte": "vite dev --open",
-		"dev:js": "npx tsc --watch --project tsconfig-js.json",
+		"dev:js": "npx tsc --project tsconfig-js.json",
+		"dev:js:watch": "npx tsc --watch --project tsconfig-js.json",
+		"dev:webpack": "npx webpack --config webpack.dev.config.cjs",
 		"build": "yarn run css:build && yarn run build:js && vite build",
 		"build:format": "prettier --write docs/**/*.html",
-		"build:js": "npx tsc --project tsconfig-js.json && yarn run uglify:js",
-		"uglify:js": "yarn run uglify:jsclass && yarn run uglify:jsapp",
-		"uglify:jsclass": "uglifyjs static/class-access-menu.js -o static/class-access-menu.min.js",
-		"uglify:jsapp": "uglifyjs static/access-menus.js -o static/access-menus.min.js",
+		"build:js": "npx tsc --project tsconfig-js.json && yarn run uglify:js && yarn run build:webpack",
+		"uglify:js": "uglifyjs static/class-access-menu.js -o static/class-access-menu.min.js",
+		"build:webpack": "npx webpack --config webpack.prod.config.cjs",
 		"preview": "vite preview --open",
 		"test": "playwright test",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -66,6 +67,8 @@
 		"tslib": "^2.5.0",
 		"typescript": "^4.9.5",
 		"uglify-js": "^3.17.4",
-		"vite": "^4.1.4"
+		"vite": "^4.1.4",
+		"webpack": "^5.77.0",
+		"webpack-cli": "^5.0.1"
 	}
 }

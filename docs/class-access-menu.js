@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-class AccessibleMenu {
+export default class AccessibleMenu {
     constructor(menu, focusSelectors) {
         this.menu = menu;
         this.classes = {
@@ -156,9 +156,3 @@ class AccessibleMenu {
         });
     }
 }
-const initAccessibleMenus = (data_selector = "data-acc-menu") => {
-    const accessMenus = document.querySelectorAll("[" + data_selector + "]");
-    accessMenus.forEach((menu) => {
-        new AccessibleMenu(menu);
-    });
-};
