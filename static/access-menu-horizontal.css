@@ -27,6 +27,7 @@
 		-webkit-appearance:none;
 		   -moz-appearance:none;
 		        appearance:none;
+		color:inherit;
 		align-items:center;
 		justify-content:center;
 		background-color:transparent;

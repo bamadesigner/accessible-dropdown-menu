@@ -24,6 +24,7 @@
 			"background": {
 				"color": { "value": "transparent" }
 			},
+			"color": { "value": "inherit" },
 			"border": { "value": "0" },
 			"border-radius": { "value": "0.35rem" },
 			"padding": { "value": "0.35rem 0.6rem" },
