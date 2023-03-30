@@ -30,6 +30,10 @@
 		align-items: design-token("horizontal.main.align-items");
 		justify-content: design-token("horizontal.main.justify-content");
 		gap: design-token("horizontal.main.gap");
+
+		.acc-menu__text {
+			flex: 1;
+		}
 	}
 
 	.acc-menu__button {
@@ -48,17 +52,15 @@
 		cursor: pointer;
 
 		.acc-menu__button__icon {
-			&:before {
-				content: "";
-				display: design-token("horizontal.button.icon.display");
-				border-style: design-token("horizontal.button.icon.border-style");
-				border-width: design-token("horizontal.button.icon.border-width");
-				border-color: design-token("horizontal.button.icon.border-color");
-				width: design-token("horizontal.button.icon.width");
-				height: design-token("horizontal.button.icon.height");
-				transform: design-token("horizontal.button.icon.transform");
-				margin: 0 0 calc(design-token("horizontal.button.icon.height") / 2);
-			}
+			display: design-token("horizontal.button.icon.display");
+			border-style: design-token("horizontal.button.icon.border-style");
+			border-width: design-token("horizontal.button.icon.border-width");
+			border-color: design-token("horizontal.button.icon.border-color");
+			width: design-token("horizontal.button.icon.width");
+			height: design-token("horizontal.button.icon.height");
+			transform: design-token("horizontal.button.icon.transform");
+			transition: design-token("horizontal.button.icon.transition");
+			margin: design-token("horizontal.button.icon.margin");
 		}
 
 		&:focus {
@@ -72,6 +74,10 @@
 		&[aria-expanded="true"] {
 			background-color: design-token("horizontal.button.expanded.background.color");
 			color: design-token("horizontal.button.expanded.color");
+
+			.acc-menu__button__icon {
+				transform: design-token("horizontal.button.expanded.icon.transform");
+			}
 		}
 	}
 
